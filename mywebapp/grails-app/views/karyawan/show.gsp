@@ -16,6 +16,11 @@
                     <input class="delete" type="submit" value="delete" />
                 </fieldset>
             </g:form>
+            <g:link class="edit" resource="${this.karyawan}" action="edit">
+                <fieldset class="buttons">
+                    <input class="edit" type="submit" value="Update" />
+                </fieldset>
+            </g:link>
         </div>
     </body>
 </html>

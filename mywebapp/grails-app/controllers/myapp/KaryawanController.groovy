@@ -17,6 +17,15 @@ class KaryawanController {
         respond new Karyawan(params)
     }
 
+    def edit(Long id) {
+        respond karyawanService.get(id)
+    }
+
+    def update(Karyawan karyawan) {
+        karyawanService.save(karyawan)
+        redirect action:"index", method:"GET"
+    }
+
     def save(Karyawan karyawan) {
         karyawanService.save(karyawan)
         redirect action:"index", method:"GET"
